@@ -76,6 +76,12 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     public static final String GROUP_MMS_MODE           = "pref_key_mms_group_mms";
     public static final String ENABLE_EMOTICONS         = "pref_key_enable_emoticons";
 
+    // Enter key action
+    public static final String ENTER_ACTION              = "pref_key_mms_enter_action";
+    public static final String ENTER_ACTION_VALUE        = "pref_key_mms_enter_action_value";
+    public static final int ENTER_DEFAULT                = 0;
+    public static final int ENTER_NEW_LINE               = 1;
+
     // Unicode
     public static final String UNICODE_STRIPPING            = "pref_key_unicode_stripping";
     public static final String UNICODE_STRIPPING_VALUE      = "pref_key_unicode_stripping_value";
@@ -148,6 +154,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private Recycler mSmsRecycler;
     private Recycler mMmsRecycler;
     private static final int CONFIRM_CLEAR_SEARCH_HISTORY_DIALOG = 3;
+
+    private ListPreference mEnterAction;
+    private CharSequence[] mEnterActionEntries;
 
     // Templates
     private Preference mManageTemplate;
@@ -254,6 +263,9 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mEnablePrivacyModePref = (CheckBoxPreference) findPreference(PRIVACY_MODE_ENABLED);
         mVibratePref = (CheckBoxPreference) findPreference(NOTIFICATION_VIBRATE);
         mRingtonePref = (RingtonePreference) findPreference(NOTIFICATION_RINGTONE);
+
+        mEnterAction = (ListPreference) findPreference(ENTER_ACTION);
+        mEnterActionEntries = getResources().getTextArray(R.array.pref_mms_enter_action_entries);
 
         mManageTemplate = findPreference(MANAGE_TEMPLATES);
         mGestureSensitivity = (ListPreference) findPreference(GESTURE_SENSITIVITY);
@@ -408,6 +420,19 @@ public class MessagingPreferenceActivity extends PreferenceActivity
                 int value = Integer.parseInt((String) newValue);
                 sharedPreferences.edit().putInt(UNICODE_STRIPPING_VALUE, value).commit();
                 mUnicodeStripping.setSummary(mUnicodeStrippingEntries[value]);
+                return true;
+            }
+        });
+
+        int enterAction = sharedPreferences.getInt(ENTER_ACTION_VALUE, ENTER_DEFAULT);
+        mEnterAction.setValue(String.valueOf(enterAction));
+        mEnterAction.setSummary(mEnterActionEntries[enterAction]);
+        mEnterAction.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+            @Override
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                int value = Integer.parseInt((String) newValue);
+                sharedPreferences.edit().putInt(ENTER_ACTION_VALUE, value).commit();
+                mEnterAction.setSummary(mEnterActionEntries[value]);
                 return true;
             }
         });
