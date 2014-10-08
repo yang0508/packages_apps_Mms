@@ -2069,8 +2069,6 @@ public class ComposeMessageActivity extends Activity
         mEnterAction = prefs.getInt(MessagingPreferenceActivity.ENTER_ACTION_VALUE,
                 MessagingPreferenceActivity.ENTER_DEFAULT);
 
-        SharedPreferences prefs = PreferenceManager
-                .getDefaultSharedPreferences((Context) ComposeMessageActivity.this);
         mGestureSensitivity = prefs
                 .getInt(MessagingPreferenceActivity.GESTURE_SENSITIVITY_VALUE, 3);
         mEnableEmoticons = prefs.getBoolean(MessagingPreferenceActivity.ENABLE_EMOTICONS, true);
