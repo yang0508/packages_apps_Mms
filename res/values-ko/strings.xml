@@ -162,7 +162,7 @@
     <string name="pref_summary_sms_delivery_reports" msgid="5852207702358546129">"메시지 전송 시 발신 알림 받기"</string>
     <string name="pref_summary_auto_delete" msgid="7719538116486177613">"한도에 도달하면 이전 메시지 삭제"</string>
     <string name="pref_summary_delete_limit" msgid="597128041393045216">"대화당 메시지 <xliff:g id="COUNT">%1$s</xliff:g>개"</string>
-    <string name="pref_summary_mms_group_mms" msgid="2266928687440696745">"수신자가 여러 명일 때 MMS를 사용하여 한 개의 메시지를 전송합니다."</string>
+    <string name="pref_summary_mms_group_mms" msgid="2266928687440696745">"MMS 메세지를 동시에 여러명에게 보낼수 있도록 설정"</string>
     <string name="pref_title_manage_sim_messages" msgid="7820895261757881177">"SIM 카드 메시지 관리"</string>
     <string name="pref_title_mms_delivery_reports" msgid="6666857926679451910">"발신 알림"</string>
     <string name="pref_title_mms_group_mms" msgid="1251698526583908432">"그룹 메시지"</string>
@@ -342,4 +342,83 @@
     <string name="notification_separator" msgid="2334673105226536422">"  "</string>
     <string name="enumeration_comma" msgid="213598026698964628">", "</string>
     <string name="message_timestamp_format" msgid="4188999027493614617">"<xliff:g id="STRING_0">%1$s</xliff:g> - <xliff:g id="STRING_1">%2$s</xliff:g>"</string>
+    <string name="pref_title_mms_notification_vibrate_pattern">진동 패턴</string>
+    <string name="pref_summary_mms_notification_vibrate_pattern">진동 패턴 설정</string>
+    <string name="pref_title_mms_notification_vibrate_call">메세지 수신시 진동</string>
+    <string name="pref_summary_mms_notification_vibrate_call">메세지가 수신되면 진동</string>
+    <string name="pref_title_notification_privacy_mode_enabled">프라이버시 모드</string>
+    <string name="pref_summary_notification_privacy_mode_enabled">상단바 에서 메세지와 보낸사람 을 숨기고 \'퀵메세지\' 기능을 해제시킴</string>
+    <string name="notification_single_title_privacy_mode">새로운 메세지</string>
+    <string name="notification_single_text_privacy_mode">1개의 읽지 않은 메세지</string>
+    <string name="notification_multiple_title_privacy_mode">새로운 메세지</string>
+    <string name="notification_multiple_text_privacy_mode"><xliff:g id="number" example="3">%1$s</xliff:g> 개의 읽지 않은 메세지</string>
+    <string name="notification_ticker_privacy_mode">새로운 메세지 수신</string>
+    <string name="pref_quickmessage">퀵메세지</string>
+    <string name="pref_dark_theme_title">다크 테마 사용</string>
+    <string name="pref_dark_theme_summary">미사용시, 기본 \'라이트\' 테마 적용</string>
+    <string name="pref_quickmessage_title">퀵메세지 팝업</string>
+    <string name="pref_quickmessage_summary">SMS 메세지 수신시 퀵메세지 창을 팝업</string>
+    <string name="pref_wake_unlock_title">잠금 화면 해제</string>
+    <string name="pref_wake_unlock_summary">잠금 화면 사용시 자동으로 잠금 화면 및 절전모드 해제</string>
+    <string name="pref_close_all_title">모두 닫기 버튼</string>
+    <string name="pref_close_all_summary">닫기 버튼을 누르면 모든 팝업 메세지를 닫음</string>
+    <string name="prefs_templates_settings">SMS 메세지 불러오기 설정</string>
+    <string name="pref_title_templates_manage">메세지 불러오기</string>
+    <string name="pref_summary_templates_manage">SMS 메세지 불러오기 관리</string>
+    <string name="template_explanation">새로 작성 또는 수정할 메세지 입력</string>
+    <string name="template_insert_hint">여기에 글자를 입력하세요</string>
+    <string name="template_empty_text">입력 공간을 비워둘수 없습니다</string>
+    <string name="template_save">저장</string>
+    <string name="template_ctx_menu_title">선택된 메세지</string>
+    <string name="template_edit">수정</string>
+    <string name="template_delete">삭제</string>
+    <string name="template_list_title">메세지 목록</string>
+    <string name="template_new_title">새로운 메세지 작성</string>
+    <string name="template_insert">메세지 불러오기</string>
+    <string name="template_gesture_draw">제스쳐 작성</string>
+    <string name="template_not_present_error">저장된 메세지가 없습니다</string>
+    <string name="template_not_present_error_title">에러</string>
+    <string name="template_select">메세지 선택</string>
+    <string name="gestures_already_present">경고: 제스쳐 가 이미 다른 메세지에서 사용중입니다!</string>
+    <string name="pref_title_templates_show_gesture">제스쳐</string>
+    <string name="pref_summary_templates_show_gesture">제스쳐 보이기</string>
+    <string name="pref_title_template_gestures_sensitivity">제스쳐 감도</string>
+    <string name="pref_extra_settings">확장 기능</string>
+    <string name="pref_title_enable_emojis">이모지 지원</string>
+    <string name="pref_summary_enable_emojis">471개의 유용한 이모지 지원</string>
+    <string name="menu_insert_emoji">이모지 삽입</string>
+    <string name="pref_title_mms_full_timestamp">시간 표시 방법</string>
+    <string name="pref_summary_mms_full_timestamp">메세지에 표시되는 시간을 날짜와 시간을 모두 표시</string>
+    <string name="pref_title_mms_use_sent_timestamp">시간 표시 유형</string>
+    <string name="pref_summary_mms_use_sent_timestamp">메세지에 표시되는 시간을 서버에 기록된 보낸 시간으로 표시</string>
+    <string name="button_close">닫기</string>
+    <string name="button_view">보기</string>
+    <string name="button_templates">메세지 불러오기</string>
+    <string name="type_to_reply_text_enter_to_send">답장 메세지 입력</string>
+    <string name="toast_sending_message">메세지 전송중..</string>
+    <string name="qm_quick_reply">답장</string>
+    <string name="qm_mark_read">닫기</string>
+    <string name="pref_title_input_type">소프트 키보드</string>
+    <string name="pref_keyboard_emoji">이모티콘 키 표시</string>
+    <string name="pref_keyboard_new_line">엔터 키 표시</string>
+    <string name="pref_keyboard_unknown">입력이 확인되지 않습니다, 다시 선택하세요</string>
+    <string name="menu_add_to_calendar">캘린더 일정에 추가</string>
+    <string name="menu_insert_contact_info">주소록 전화번호 삽입</string>
+    <string name="cannot_find_contact">선택한 연락처를 입력할 수 없습니다</string>
+    <string name="insert_contact_info_positive_button">입력</string>
+    <string-array name="pref_mms_notification_vibrate_pattern_entries">
+        <item>보통</item>
+        <item>중간</item>
+        <item>길게</item>
+        <item>여러번 짧게</item>
+        <item>여러번 길게</item>
+        <item>@string/pref_title_mms_notification_vibrate_custom</item>
+    </string-array>
+    <string name="pref_title_mms_notification_vibrate_custom">사용자 설정</string>
+    <string name="pref_text_mms_notification_vibrate_custom">1000/1 초 간격으로 off/on 설정: off, on, off, on\u2026</string>
+    <string name="pref_title_unicode_stripping">스트립 유니코드</string>
+    <string name="pref_title_enable_quick_emojis">퀵이모지 버튼</string>
+    <string name="pref_summary_enable_quick_emojis">메세지 입력 위치에 이모지 입력 버튼 표시</string>
+    <string name="pref_title_enable_softbank_encoding">소프트뱅크 이모지</string>
+    <string name="pref_summary_enable_softbank_encoding">소프트뱅크 이모지 인코딩 사용</string>
 </resources>
